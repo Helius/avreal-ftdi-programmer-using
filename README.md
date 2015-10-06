@@ -4,11 +4,11 @@ Latest version of avreal and libftdi you can download here:<br>
 [avreal](http://real.kiev.ua/avreal/download/)<br>
 [libftdixx](http://www.ftdichip.com/Drivers/D2XX.htm)<br>
 
-Now create symlink to ftdixx lib, because **aveal** found it us **libftd2xx.so.0**
+Now create symlink to ftdixx lib, because **aveal** found it as **libftd2xx.so.0**
 ```bash
 ln -s libftd2xx.so.1.3.6 libftd2xx.so.0
 ```
-Unload **ftdi_sio** module because it doesn't give as work with ftdi chip
+Unload **ftdi_sio** module because it doesn't give us work with ftdi chip
 ```bash
 rmmod ftdi_sio
 ```
