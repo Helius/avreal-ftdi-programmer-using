@@ -15,10 +15,13 @@ now we can run avreal (for example for mega8 and my first home-made adapter)
 ```bash
 ./avreal +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -r test.hex
 ```
+More conviement way is to use [avreal.sh](https://github.com/Helius/avreal-ftdi-programmer-using/blob/master/avreal.sh). 
 
-To setup envirements you may run avreal_prepare.sh it will remove ftdi_sio module and export LD_LIBRARY_PATH to lib from this repo.
+Just run this script as root user like original avreal, it prepares enviroment for you and runs suitable binary with libs.
+
 
 repo contains: 
 avreal/Linux64 v1.29r0 (Dec 11 2013 19:45:35)
-libftd2xx.so.1.3.6
+avreal/Linux32 v1.29r0 (Dec 11 2013 19:45:35)
+libftd2xx.so.1.3.6 for x86 and x64 archs
 
