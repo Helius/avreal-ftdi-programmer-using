@@ -1,10 +1,10 @@
 # AVR Avreal Ubuntu flashing brief guide
 
-Latest version of avreal and libftdi you can download here:
-[avreal](http://real.kiev.ua/avreal/download/)
-[libftdixx](http://www.ftdichip.com/Drivers/D2XX.htm)
+Latest version of avreal and libftdi you can download here:<br>
+[avreal](http://real.kiev.ua/avreal/download/)<br>
+[libftdixx](http://www.ftdichip.com/Drivers/D2XX.htm)<br>
 
-Now create symlink to ftdixx lib, because **aveal** found it as **libftd2xx.so.0**
+Now create symlink to ftdixx lib, because **aveal** found it us **libftd2xx.so.0**
 ```bash
 ln -s libftd2xx.so.1.3.6 libftd2xx.so.0
 ```
@@ -21,15 +21,16 @@ now we can run avreal (for example for mega8 and my first home-made adapter)
 ```bash
 ./avreal +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -r test.hex
 ```
-
+Wrapper
+--------
 
 More conviement way is to use [avreal.sh](https://github.com/Helius/avreal-ftdi-programmer-using/blob/master/avreal.sh). 
 
-Just run this script as root user like original avreal, it prepares enviroment for you and runs suitable binary with libs.
+Just run this wrapper as root user like original avreal, it prepares enviroment for you and runs suitable binary with libs.
 
 
-repo contains: 
-avreal/Linux64 v1.29r0 (Dec 11 2013 19:45:35)
-avreal/Linux32 v1.29r0 (Dec 11 2013 19:45:35)
-libftd2xx.so.1.3.6 for x86 and x64 archs
+repo contains:<br>
+avreal/Linux64 v1.29r0 (Dec 11 2013 19:45:35)<br>
+avreal/Linux32 v1.29r0 (Dec 11 2013 19:45:35)<br>
+libftd2xx.so.1.3.6 for x86 and x64 archs<br>
 
