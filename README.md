@@ -21,6 +21,21 @@ now we can run avreal (for example for mega8 and my first home-made adapter)
 ```bash
 ./avreal +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -r test.hex
 ```
+Examples
+--------
+Eraise, write, verify flash **main.hex**
+```bash
+./avreal.sh +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -e -w -v -c main.hex
+```
+Fuse list for Atmega8 chip
+```bash
+./avreal.sh +Atmega8 -?
+```
+Read fuse bits
+```bash
+./avreal.sh +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -f
+```
+
 Wrapper
 --------
 
