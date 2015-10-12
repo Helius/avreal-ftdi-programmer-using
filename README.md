@@ -17,9 +17,16 @@ Export library path
 export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
 ```
 
-now we can run avreal (for example for mega8 and my first home-made adapter)
+Wrapper
+--------
+
+More conviement way is to use [avreal.sh](https://github.com/Helius/avreal-ftdi-programmer-using/blob/master/avreal.sh). 
+
+Just run this wrapper as root user like original avreal, it prepares enviroment for you and runs suitable binary with libs.
+
+now we can flash (for example for mega8 and my first home-made adapter on FT2232, schematic in ft2232-prog-doc)
 ```bash
-./avreal +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -r test.hex
+./avreal.sh +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -r test.hex
 ```
 Examples
 --------
@@ -27,6 +34,9 @@ Eraise, write, verify flash **main.hex**
 ```bash
 ./avreal.sh +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -e -w -v -c main.hex
 ```
+
+Fuses
+--------
 Fuse list for Atmega8 chip
 ```bash
 ./avreal.sh +Atmega8 -?
@@ -35,13 +45,13 @@ Read fuse bits
 ```bash
 ./avreal.sh +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -f
 ```
+Select internal RC oscillator with 8 MHz
+```bash
+./avreal.sh +ATmega8 -aft2232:enable=adbus4 -pd="Dual RS232 A" -f CKSEL=4 -w
+```
+For external high speed oscillator CKSEL=F
 
-Wrapper
---------
 
-More conviement way is to use [avreal.sh](https://github.com/Helius/avreal-ftdi-programmer-using/blob/master/avreal.sh). 
-
-Just run this wrapper as root user like original avreal, it prepares enviroment for you and runs suitable binary with libs.
 
 
 repo contains:<br>
