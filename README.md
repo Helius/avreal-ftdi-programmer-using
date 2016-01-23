@@ -34,6 +34,10 @@ Eraise, write, verify flash **main.hex**
 ```bash
 ./avreal.sh +ATmega8 -aft2232:enable=~adbus4 -pd="Dual RS232 A" -e -w -v -c main.hex
 ```
+Write main.hext to Arduino pro mini
+```bash
+./avreal.sh +ATmega328P -aft2232:enable=~adbus4 -pd="Dual RS232 A" -e -w -v -c main.hex
+```
 
 Fuses
 --------
